@@ -31,6 +31,10 @@ test("VIP15 takes 15% off", () => {
   assert.equal(applyDiscount(200, "VIP15"), 170);
 });
 
+test("SPRING20 takes 20% off", () => {
+  assert.equal(applyDiscount(80, "SPRING20"), 64);
+});
+
 test("an unknown discount code is rejected", () => {
   assert.throws(() => applyDiscount(50, "FREESTUFF"), /Unknown discount code/);
 });
