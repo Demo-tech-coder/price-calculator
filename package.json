@@ -1,0 +1,13 @@
+{
+  "name": "price-calculator",
+  "version": "1.0.0",
+  "description": "Basket pricing for the Orbit store: subtotal, discount codes and VAT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
