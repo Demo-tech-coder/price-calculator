@@ -4,6 +4,7 @@
 export const DISCOUNT_CODES = {
   WELCOME10: 10, // percent off
   VIP15: 15,
+  SPRING20: 20,
 };
 
 export const VAT_RATE = 0.2;
@@ -18,7 +19,7 @@ export function applyDiscount(amount, code) {
   if (!code) return amount;
   const percent = DISCOUNT_CODES[code];
   if (percent === undefined) throw new Error(`Unknown discount code: ${code}`);
-  return round(amount * (1 - percent / 100));
+  return round(amount - percent);
 }
 
 export function addVat(amount) {
